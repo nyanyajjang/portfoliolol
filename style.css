@@ -687,6 +687,10 @@ footer a {
     font-family: 'Rajdhani', sans-serif;
 }
 
+.uxone h1 {
+    padding-top: 20%;
+    padding-bottom: 5%;
+}
 
 .uxwords {
     font-family: 'Righteous', cursive;
@@ -1234,6 +1238,19 @@ iframe {
     width: 100%;
 }
 
+/** video **/
+
+
+.videowords{
+    font-family: 'Righteous', cursive;
+    font-size: 1.5em;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: aliceblue;
+}
 .videofooter{
     margin-top: 25em;
     padding-bottom: 3em;
@@ -1665,9 +1682,9 @@ iframe {
         font-size: 3.5em;
     }
 
-    .uxone h1 {
+    /* .uxone h1 {
         padding-bottom: 10%;
-    }
+    } */
     footer a {
         font-size: 2em;
         padding-bottom: 0.3em;
