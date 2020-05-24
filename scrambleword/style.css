@@ -1,0 +1,58 @@
+
+
+.firstsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+
+.message {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    background-color:green;
+}
+
+header p{
+    text-align: center;
+    padding: 50px;
+    font-size: 50px;
+}
+
+.mark{
+    font-size: 30px;
+}
+
+.secondsection{
+    margin-top: 100px;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 35px;
+}
+
+input{
+    width: 60%;
+    text-align: center;
+    justify-self: center;
+    font-size: 10px;
+}
+
+.thirdsection{
+width: 100%;
+margin-top: 50px;
+display: grid;
+grid-template-rows: 1fr 1fr;
+grid-gap: 20px;
+}
+
+button {
+    width: 20%;
+    justify-self: center;
+    
+}
+

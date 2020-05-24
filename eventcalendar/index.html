@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+     
+     <!-- <style>
+         .calendar {
+             display: grid;
+             grid-template-columns: repeat(7, 100px);
+             grid-template-rows: 50px repeat(5,100px);
+             justify-items: end;
+         }
+
+     </style> -->
+</head>
+<body>
+    <div id="app">
+
+            <div class="container mt-5">
+            <div class="card border-primary mb-3 justify-content-center" >
+            <div class="card-header">
+            <div class="current-date mt-5 mb-1 mr-7">
+        
+             <div class="today">
+
+                <div class= "month">
+                  <div style="font-size: 1.5rem" class="arrow-down ml-5" @click="monthDown()"><i class="fas fa-caret-left"></i></div>
+                  
+                 <div style="font-size: 1.5rem" class="arrow-up mr-5" @click="monthUp()"><i class="fas fa-caret-right"></i></div>
+                </div>
+             
+            <div class="select">
+
+                <select v-model="selected.month">
+                <option v-for="(month, index) in months" 
+                :key="index" :value="index"> {{ month }}</option>
+            </select>
+            <select v-model="selected.year">
+                <option v-for = "(year, index) in years"
+                :key = "index" :value = "year"> {{ year }}</option>
+            </select>
+
+            </div>
+        </div>
+</div>
+            </div>
+            
+
+
+        <div class="card-body text-primary mb-1">
+                
+                <div class="weekdays">
+                 <div class="weekday" v-for="(weekday, index) in weekdays" :key="index">
+                        {{ weekday }}
+                </div>
+                </div>
+
+                    <div class="date">
+                        <div v-for="n in (startDay -1)"></div>
+            
+            <everyday @click="selected.date = day" 
+            :class="{active: day === selected.date}" class="day" :month="selected.month" :year="selected.year" v-for="(day, index) in daysInMonth" :day="day"> 
+            </everyday>
+        </div>
+            
+    </div>
+
+
+    </div>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+<script src="index.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

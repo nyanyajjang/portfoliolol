@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to Scramble.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <p> Welcome to scramble </p>
+  </header>
+  <section id="app">
+
+
+    <div class="firstsection">
+
+    <div class="points">
+      <div class= mark>{{game.points}}</div>
+      <h2>POINTS</h2>
+    </div>
+
+    <div class="strikes">
+      <div class= mark>{{game.maxStrikes}}</div>
+      <h2>STRIKES</h2>
+    </div>
+
+    </div>
+
+    <div>
+    <div class="message" v-if="correct"><p>correct. Next word.</p></div>
+    <div class="message" v-if="wrong"><p>Wrong. Try again</P></div>
+    <div class="message" v-if="pass"><p>You passed. Next word.</p></div>
+    <div class="message" v-if="lost"><p>You lost.</p></div>
+    <div class="message" v-if="noPass"><p>you used the three passes</p></div>
+    </div>
+
+    <div class="secondsection">
+    {{ message }}
+      
+    <input type="text"  :disabled="lost === true" v-model="texting" @keyup.enter="textInput">
+    </div>
+
+    <div class="thirdsection">
+      <button class="btn btn-danger" type="submit" :disabled="lost === true" @click="passes"><div class="btn btn-light">{{ game.maxPasses }}</div> PASSES REMAINING</button>
+      <button class="btn btn-primary" type="submit" v-if="lost === true" @click="reStart">Play, again?</input>                                            
+    </div>
+  
+  </section>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="scramble.js"></script>
+</body>
+
+</html>
