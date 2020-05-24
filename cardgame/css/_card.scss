@@ -1,0 +1,126 @@
+$card-height: 200px;
+
+.card {
+    height: $card-height;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    background-color: skyblue;
+
+    &:hover {
+        cursor: grab;
+    }
+}
+
+.card-clubs .back-image {
+    background: url(../img/clubs.png) no-repeat;
+}
+
+.card-diamonds .back-image {
+    background: url(../img/diamonds.png) no-repeat;
+}
+
+.card-hearts .back-image {
+    background: url(../img/hearts.png) no-repeat;
+}
+
+.card-spades .back-image {
+    background: url(../img/spades.png) no-repeat;
+}
+
+.flip-container {
+    perspective: 1000px;
+    -moz-perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -ms-perspective: 1000px;
+
+    &:active, &.hover, &.flip {
+        .flipper {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+
+            .back {
+                visibility: visible;
+            }
+        }
+    }
+
+    .front, .back {
+        width: 100%;
+        height: 100%;
+
+        backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+        -moz-backface-visibility: visible;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .front {
+        z-index: 2;
+
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+    }
+
+    .back {
+        visibility: hidden;
+
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+
+        .back-image {
+            width: 80%;
+            height: 80%;
+            margin: 10% auto;
+
+            background-color: white;
+            background-position: center;
+        }
+    }
+
+    .flipper {
+        transition: 0.6s;
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -o-transition: 0.6s;
+
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+
+        position: relative;
+    }
+}
+
+.match {
+    .flipper {
+        background-color: gray;
+    }
+}
+
+.collapsed {
+    transition: 2.0s;
+    -webkit-transition: 2.0s;
+    -moz-transition: 2.0s;
+    -o-transition: 2.0s;
+
+    transform: translateY(1000px);
+    -webkit-transform: translateY(1000px);
+    -moz-transform: translateY(1000px);
+    -ms-transform: translateY(1000px);
+    -o-transform: translateY(1000px);
+}

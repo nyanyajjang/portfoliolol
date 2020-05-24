@@ -1,0 +1,2305 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figue,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/***************CSS set**********************/
+
+/****** header ******/
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #202020;
+}
+
+.container {
+    margin: 0 auto;
+    background-color: #202020;
+}
+
+a {
+    text-decoration-line: none;
+    color: floralwhite;
+}
+/**** navigation ****/
+
+
+.md-navigation {
+    display: none;
+}
+
+.trigger {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: floralwhite;
+    font-weight: bold;
+    text-decoration-line: none;
+    font-size: 2.5em;
+    font-family: 'Barriecito', cursive;
+    letter-spacing: 0.2em;
+    transition: .5s;
+    padding: 0.3em;
+    background-color: transparent;
+
+
+}
+
+
+.nav-open .trigger {
+    background: #202020;
+}
+
+
+
+
+
+.navigation {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 50%;
+    padding: 3.5em;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(-150%);
+    transition: transform .3s cubic-bezier(.7, 0, 0, 1);
+}
+
+
+.nav-open .navigation {
+    transform: translateY(0);
+}
+
+
+
+
+.navigation a {
+    display: block;
+    padding: 0.2em;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: san-serif;
+    text-decoration: none;
+    color: #f6f8f8;
+    font-family: 'Righteous', cursive;
+
+}
+
+.navigation a:hover {
+    color: burlywood;
+}
+
+
+/***** Main *****/
+
+.main {
+    background-color: #202020;
+
+}
+
+.nav-open .world {
+    transform: scale(.8);
+}
+
+.world {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: url('image/cover1.jpg') center;
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px #000;
+    transition: transform .5s;
+}
+
+.twolayers img{
+    display: none;
+}
+
+
+.letters {
+        visibility: visible;
+        color: rgb(212, 138, 14);
+        font-family: 'Luckiest Guy', cursive;
+        letter-spacing: 0.15em;
+        font-size: 2.5em;
+        width: 100%;
+        text-align: center;
+        height: 1em;
+}
+
+
+
+.intro {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; 
+    border-right: 0.3em solid rgb(18, 176, 204); 
+    white-space: wrap;
+    width: 17em;
+    margin: 0 auto;
+    margin-top: 2em;
+    font-size: 1em;
+    letter-spacing: .2em; 
+    animation: 
+      typing 4s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(18, 176, 204) }
+  }
+
+
+
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+/*** icon ***/
+
+.icon {
+    position: fixed;
+    z-index: 333;
+    bottom: 0;
+    left: 0;
+    display: block;
+}
+
+.icon i {
+    font-size: 2.5em;
+    color: floralwhite;
+}
+
+
+/**** main menus ****/
+
+
+.boxes {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.menu {
+    border-bottom: 0.5px solid black;
+    overflow: hidden;
+    position: relative;
+    flex: 1px;
+    transition: 0.5s flex;
+
+}
+
+
+.text {
+    position: absolute;
+    bottom: 0px;
+    padding-top: 1.15em;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    transition: 0.4s;
+    background-color: black;
+    opacity: 0.5;
+}
+
+
+.menu:hover .text {
+    visibility: hidden;
+    transition: 0s;
+
+    padding-top: 1.8em;
+
+}
+
+
+
+
+.subtitle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: 0.1s ease-in-out;
+    visibility: hidden;
+    will-change: transform;
+    transform: translateY(100%);
+    height: 9em;
+    width: 10em;
+    border: 7px solid aliceblue;
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 0.2em;
+    margin: auto;
+    padding: 1.2em;
+    padding-top: 3.5em;
+}
+
+
+
+.menu:hover .subtitle {
+    transform: translateY(-10%);
+    visibility: visible;
+    transition-delay: 0s;
+    margin-top: 5.7em;
+    opacity: 1;
+
+}
+
+
+
+.layout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu:hover .layout {
+
+    width: 100%;
+    height: 150vh;
+}
+
+
+
+
+.menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu:hover {
+    flex: 0.01 0 450px;
+}
+
+
+/**** moving menu ****/
+.trigger {
+    animation: 1400ms ease infinite shake;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    50% {
+        transform: translate3d(0, 10px, 0);
+    }
+}
+
+
+/*** skills ***/
+
+.skills {
+    
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding: 1.5em;
+    padding-bottom: 4em;
+
+}
+
+.skills img {
+    width: 55%;
+}
+
+
+.html,
+.cms,
+.photoshop,
+.illustrator,
+.premiere,
+.aftereffects {
+    padding: 1.5em;
+    position: relative;
+}
+
+.html *,
+.cms *,
+.photoshop *,
+.illustrator *,
+.premiere *,
+.aftereffects * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.html h1{
+    padding-top: 20%;
+}
+.popup {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+    top: 0;
+    right: 0;
+  width: 100%;
+  height: 100%;
+    opacity: 0;
+   padding-top: 30%;
+  font-weight: bold;
+  font-family: monospace;
+font-size: 1.1em;
+color: #fff;
+letter-spacing: 0.2em;
+}
+
+
+.html:hover img,
+.cms:hover img,
+.photoshop:hover img,
+.illustrator:hover img,
+.premiere:hover img,
+.aftereffects:hover img{
+  opacity: 0;
+}
+
+
+.popup:hover {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+
+
+
+
+.title {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 0.2em;
+    color: floralwhite;
+}
+
+
+footer {
+
+    height: 3em;
+    text-align: center;
+    padding-top: 1em;
+}
+
+footer a {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+/****** Page one ******/
+
+.explanation {
+    background-color: aliceblue;
+    position: relative;
+
+}
+
+.explanation img {
+    object-fit: cover;
+    width: 100%;
+    height: 4.5em;
+}
+
+.explanation p {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    text-align: left;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+
+.explanation p {
+  
+  overflow: hidden; 
+  white-space: nowrap; 
+  letter-spacing: .15em; 
+  animation: 
+    typing2 3s steps(30, end),
+    blink-caret2 .4s step-end infinite;
+    
+}
+
+@keyframes typing2 {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+@keyframes blink-caret2 {
+  from, to { border-color: transparent }
+  100% { border-color: transparent }
+}
+
+
+
+
+
+.pageonelayout {
+    background-color: bisque;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.pageone {
+    position: relative;
+
+}
+
+.pageone img {
+    height: 25em;
+    width: 100%;
+}
+
+
+
+.pageone h1 {
+    position: absolute;
+    bottom: 0%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    padding-top: 5em;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 0.1em;
+}
+
+
+
+.works {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.works img {
+    background-size: cover;
+    width: 80%;
+    margin-bottom: 20%;
+    border: 1px solid white;
+    padding: 1%;
+}
+
+.works h1 {
+    padding-top: 10%;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+
+.uxwords {
+    font-family: 'Righteous', cursive;
+    font-size: 1.5em;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: aliceblue;
+
+}
+
+.creativeprocess a{
+    color: rgb(219, 209, 150);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.creativeprocess {
+    padding: 2em;
+    padding-top: 0;
+}
+
+/**** gallery page ****/
+
+
+.numbers {
+    text-align: center;
+    font-size: 1.1em;
+    padding-top: 30%;
+
+}
+
+.numbers a {
+    text-decoration: none;
+    color: wheat;
+    font-size: 1.1em;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+
+.sndworks {
+    text-align: center;
+}
+
+.sndworks img {
+    background-size: cover;
+    border-radius: 3%;
+    width: 100%;
+    margin-bottom: 20%;
+}
+
+.sndworks h1 {
+    padding-top: 15%;
+    padding-bottom: 15%;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Rajdhani', sans-serif;
+    padding-top: 35%;
+}
+
+
+/***** first gallery *****/
+
+
+
+.photoillust {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+}
+
+
+
+.photo {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 1em;
+    overflow: hidden;
+    font-family: Cute Font, cursive;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+
+.photo img {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    filter: grayscale(0.8) blur(0.5px);
+    display: block;
+}
+
+.photoillust h2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+    padding-right: 5%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: yellowrgba(0, 0, 0, 0.4);
+}
+
+.gallerylayout {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+
+.hover .gallerylayout {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.9) 100%);
+    transition-delay: 0.2s;
+}
+
+.hover {
+    z-index: 1;
+    transform: scale(1.1);
+    transition-duration: 1s;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    border-radius: 45px;
+}
+
+.hover img {
+    transition: .7s ease-in, transform .3s ease-out;
+    filter: grayscale(0);
+
+}
+
+
+.hover .newtext {
+
+    opacity: 1;
+    transition-delay: 0.2s;
+    transition: 0.5s;
+    color: darkkhaki;
+}
+
+
+.modal {
+
+
+    text-align: center;
+    position: fixed;
+    z-index: 11;
+    opacity: 0;
+    visibility: hidden;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    border-radius: 15px;
+    padding-top: 20%;
+
+
+}
+
+.modal img {
+    text-align: center;
+    width: 75%;
+    height: 65%;
+    filter: grayscale(0);
+    border-radius: 10px;
+}
+
+.modal h2 {
+    visibility: hidden;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/**** second gallery ****/
+
+
+
+.taken {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+}
+
+.taken img {
+
+    background-size: cover;
+}
+
+
+.newphoto {
+    width: auto;
+    height: auto;
+    margin: 0.8em;
+    font-family: Cute Font, cursive;
+    color: #fff;
+    position: relative;
+    transition: all 0.2s;
+}
+
+
+.newphoto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    filter: grayscale(0.8) blur(0.5px);
+    display: block;
+}
+
+
+
+.newlayout {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: auto;
+    height: auto;
+    border-radius: 40px;
+}
+
+.newhover .newlayout {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.9) 100%);
+    transition-delay: 0.2s;
+}
+
+.newhover {
+    z-index: 1;
+    transform: scale(1.1);
+    transition-duration: 1s;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    border-radius: 40px;
+}
+
+.newhover img {
+    transition: .7s ease-in, transform .3s ease-out;
+    filter: grayscale(0);
+
+}
+
+
+
+
+
+.newmodal {
+    position: fixed;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 15px;
+    padding-top: 15%;
+}
+
+.newmodal img {
+    text-align: center;
+
+    width: 90%;
+    height: auto;
+    filter: grayscale(0);
+    border-radius: 10px;
+
+}
+
+
+
+.newshow {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/***** coding *****/
+/****** css poster fixed *****/
+
+.topicposter {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+
+
+.cssposter {
+    margin: 0 auto;
+    text-align: center;
+    width: 800px;
+}
+
+.image-wrap {
+    position: relative;
+
+}
+
+.box {
+    width: 800px;
+    height: 55px;
+    font-family: 'Special Elite', cursive;
+    background-color: black;
+    color: rgb(178, 35, 92);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 10px;
+    position: absolute;
+
+}
+
+
+.image-wrap h1 {
+    font-weight: bold;
+    position: absolute;
+}
+
+.image-wrap img {
+    width: 800px;
+    height: 900px;
+    display: block;
+    border: 5px solid black;
+}
+
+
+
+.one {
+    font-family: 'Homemade Apple', cursive;
+    right: 0;
+    top: 0;
+    padding-top: 55%;
+    padding-right: 2.5%;
+    font-size: 80px;
+    color: goldenrod;
+    position: absolute;
+
+}
+
+.two {
+    font-family: 'Overlock SC', cursive;
+    color: beige;
+    font-size: 22px;
+    right: 40px;
+    bottom: 340px;
+    position: absolute;
+
+}
+
+.second {
+    font-family: 'Overlock SC', cursive;
+    font-size: 22px;
+    color: beige;
+    bottom: 0;
+    right: 0;
+    width: 367px;
+    margin-bottom: 38.5%;
+    margin-right: 5%;
+    padding-bottom: 0.6%;
+    border-bottom: solid goldenrod;
+    border-bottom-width: thick;
+    position: absolute;
+}
+
+.three {
+    font-family: 'Overlock SC', cursive;
+    top: 0;
+    padding-top: 2%;
+    font-size: 24px;
+    color: dimgrey;
+    position: absolute;
+    width: 100%;
+
+}
+
+.third {
+    font-family: 'Overlock SC', cursive;
+    top: 0;
+    padding-top: 14%;
+    font-size: 24px;
+    color: dimgrey;
+    position: absolute;
+    width: 100%;
+}
+
+.four {
+    font-family: 'Libre Barcode 128', cursive;
+    font-size: 48px;
+    color: dimgrey;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    padding-top: 11.5%;
+}
+
+.fourth {
+    font-family: 'Libre Barcode 128', cursive;
+    font-size: 48px;
+    color: dimgrey;
+    padding-top: 4.5%;
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.fourths {
+    font-family: 'Libre Barcode 128', cursive;
+    font-size: 48px;
+    color: dimgrey;
+    padding-top: 8%;
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.five {
+    font-family: 'Zilla Slab Highlight', cursive;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgb(178, 35, 92);
+    text-align: left;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    padding-top: 37%;
+    padding-left: 5%;
+}
+
+.six {
+    font-family: 'Zilla Slab Highlight', cursive;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgb(178, 35, 92);
+    padding-top: 22%;
+    padding-right: 8%;
+    text-align: right;
+    position: absolute;
+    width: 100%;
+}
+
+.seven {
+    font-family: 'Zilla Slab Highlight', cursive;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgb(178, 35, 92);
+    width: 100%;
+    left: 0;
+    text-align: right;
+    padding-top: 34%;
+    padding-right: 23%;
+    position: absolute;
+}
+
+.eight {
+    font-family: 'Zilla Slab Highlight', cursive;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgb(178, 35, 92);
+    padding-top: 71%;
+    padding-left: 15%;
+    text-align: left;
+    position: absolute;
+    width: 100%;
+}
+
+.p-poster {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    color: beige;
+    width: 100%;
+    padding-bottom: 5%;
+    padding-right: 6%;
+    text-align: right;
+    font-size: 14.4px;
+    font-family: 'Overlock SC', cursive;
+}
+
+.line {
+    position: absolute;
+    width: 750px;
+    height: 865px;
+    border: 5px solid grey;
+    margin: 25px;
+    top: -7px;
+}
+
+.codewords {
+        font-family: 'Righteous', cursive;
+        font-size: 1.5em;
+        text-align: center;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        color: aliceblue;
+}
+.f-three {
+    padding-top: 20%;
+    padding-bottom: 3%;
+    font-weight: bold;
+}
+
+
+footer a {
+    color: floralwhite;
+    font-weight: bold;
+}
+
+footer {
+    font-size: 0.7em;
+}
+
+iframe {
+    width: 100%;
+}
+
+.videofooter{
+    margin-top: 25em;
+    padding-bottom: 3em;
+}
+
+@media screen and (min-width: 375px) {
+
+    /*** gallery ***/
+
+    .photoillust h2 {
+        padding-top: 7%;
+        padding-right: 8%;
+        font-size: 1.1em;
+    }
+
+    /**** index page ****/
+
+
+.intro {
+    width: 20em;
+    margin: 0 auto;
+    margin-top: 2em;
+    font-size: 1.1em;
+  }
+
+    
+    .skills {
+        padding-bottom: 6em;
+    }
+
+    .popup {
+        font-size: 1.3em;
+    }
+
+    .title {
+        padding-top: 3em;
+
+    }
+
+    .modal img {
+        width: 85%;
+    }
+
+    .newmodal img {
+        width: 95%;
+    }
+
+    /**** moving menus ***/
+
+
+
+
+    .subtitle {
+        width: 10em;
+        height: 10em;
+        padding-top: 4em;
+    }
+
+    
+
+    
+.videofooter{
+    margin-top: 25em;
+    padding-bottom: 3em;
+}
+
+
+}
+
+
+@media screen and (min-width: 425px) {
+
+    .photoillust h2 {
+        padding-top: 6%;
+        padding-right: 6%;
+        font-size: 1.2em;
+    }
+
+    .main h1 {
+        font-size: 2.9em;
+
+    }
+
+    .intro {
+    width: 20em;
+        padding-bottom: 0.5em;
+    font-size: 1.3em;
+  }
+
+    .popup{
+        font-size: 1.3em;
+        letter-spacing: 0.3em;
+    }
+    /**** moving menus ****/
+
+    .subtitle {
+        width: 10em;
+        height: 9em;
+        padding-top: 3.5em;
+
+    }
+
+   
+    /**** ux page ****/
+
+    .creativeprocess a{
+        font-size: 1.3em;
+    }
+    .creativeprocess {
+        padding-bottom: 4em;
+    }
+ 
+
+}
+
+@media screen and (min-width: 768px) {
+
+
+
+    .photoillust h2 {
+
+        font-size: 2em;
+    }
+
+    .photo img {
+        border-radius: 3em;
+    }
+
+    .newphoto img {
+        border-radius: 3em;
+    }
+
+    .modal {
+        padding-top: 10%;
+    }
+
+    .modal img {
+        border-radius: 3em;
+        width: 45%;
+        height: 100%;
+    }
+
+    .newmodal img {
+        border-radius: 3em;
+    }
+
+
+    /**** index page ****/
+
+    .trigger {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .positionnav {
+        position: relative;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 3.4em;
+        background-color: #202020;
+        
+    }
+
+    
+    .md-navigation {
+        display: block;
+        position: fixed;
+        position: absolute;
+        right: 7em;
+        z-index: 999;
+        width: 50%;
+        padding-top: 1.3em;
+    }
+
+
+    .md-navigation ul {
+        visibility: visible;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 1.5em;
+        width: 0;
+        position: fixed;
+        z-index: 999;                           
+        background-color: #202020;
+    }
+    
+    
+    .homesign {
+        padding-left: 4em;
+    }
+
+
+    
+    .md-navigation li a {
+        display: block;
+        text-decoration: none;
+        color: floralwhite;
+        font-size: 1.1em;
+        font-weight: bold;
+        font-family: 'Righteous', cursive;
+        
+    }
+
+    
+    .explanation img {
+        height: 8em;
+    }
+
+    
+    .icon {
+        bottom: 10%;
+        font-size: 1em;
+    }
+
+
+    
+    
+/***** main section *****/
+
+    .world {
+        padding-top: 10em;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        
+    }
+
+    .letters {
+        visibility: hidden;
+    }
+
+    
+    
+    
+    .intro {
+        width: 15em;
+        height: 4.5em;
+        font-size: 2em;
+        white-space: wrap;
+        letter-spacing: .15em;
+        animation:
+          typing 4s steps(30, end),
+          blink-caret .5s step-end infinite;
+        margin-left: 0em;
+        margin-bottom: 1em;
+        margin-top: 7em;
+
+      }
+      
+    
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        10% { border-color: rgb(18, 176, 204) }
+      }
+    
+    
+    .twolayers img{
+        visibility: visible;
+        width: 35em;
+        height: 20em;
+        display: block;
+        margin: 0 auto;
+        
+    }
+   
+
+    .bar{
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+        height: 5em;
+        background-color: rgb(50, 97, 141);
+        animation-name: wave;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    
+
+    @keyframes wave {
+        25% {
+            transform: scaleY(1.4);
+            background-color: rgb(170, 118, 20);
+        }
+
+        50% {
+            transform: scaleY(1);
+            background-color: rgb(170, 118, 20);
+        }
+
+        
+    }
+
+
+    
+    
+
+
+   .html .popup {
+       padding-bottom: 40%;
+   }
+
+   
+    
+
+    .skills {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 12%;
+        padding-top: 10%;
+    }
+
+    
+    .skills img {
+        margin-bottom: 4.5em;
+
+    }
+
+    
+    .title {
+        padding-top: 15%;
+    }
+
+
+    
+    .boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    
+    .menu {
+        overflow: hidden;
+        position: relative;
+    }
+
+    
+    .text {
+        padding-top: 3em;
+
+    }
+
+    
+    .subtitle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: 0.5s ease-in-out;
+        visibility: hidden;
+        will-change: transform;
+        transform: translateY(200%);
+        height: 5em;
+        width: 10em;
+        color: aliceblue;
+        text-align: center;
+        padding-top: 1.3em;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+   
+
+    .menu-two p {
+        padding-top: 1.7em;
+
+    }
+
+ 
+    .menu-four p {
+        padding-top: 1.7em;
+    }
+
+    
+    
+    .menu:hover .subtitle {
+        transform: translateY(-100%);
+
+        visibility: visible;
+        transition-delay: 0s;
+        margin-top: 8em;
+        opacity: 1;
+
+    }
+
+
+
+    .menu:hover .text {
+        visibility: hidden;
+        background-color: transparent;
+        transition: 0.3s;
+    }
+
+    .layout {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+
+    
+
+
+    /**** ux page ****/
+
+
+    .pageone h1 {
+        padding-top: 5em;
+    }
+
+    .works h1 {
+        font-size: 3.5em;
+    }
+
+    .uxone h1 {
+        padding-bottom: 10%;
+    }
+    footer a {
+        font-size: 2em;
+        padding-bottom: 0.3em;
+    }
+
+    /**** gallery page ****/
+
+    .photo {
+        width: 40%;
+    }
+
+    .newphoto {
+        width: 40%;
+    }
+
+    .modal img {
+        width: 70%;
+        height: 90%;
+
+    }
+}
+
+
+.design {
+    display:flex;
+    flex-direction: column;
+    padding: 50px 15px;
+}
+
+.designs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.designs img{
+        width: 30%;
+        margin: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+
+    /***** gallery page *****/
+
+
+
+
+    .photo {
+        width: 30%;
+    }
+
+    .newphoto {
+        width: 30%;
+    }
+
+    .modal {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+    }
+
+    .modal img {
+        border-radius: 3em;
+        width: 70%;
+        height: 70%;
+        margin-top: 10%;
+        margin-bottom: 0%;
+
+    }
+
+    /**** index page ****/
+
+    .positionnav {
+        height: 9%;
+    }
+
+.md-navigation {
+    padding-top: 2em;
+    right: 12em;
+    }
+
+
+    .md-navigation ul {
+        grid-gap: 2em;
+        text-align: right;
+    }
+
+    
+    .md-navigation ul li {
+        font-size: 1.4em;
+    }
+
+
+
+    .icon {
+        bottom: 0;
+
+    }
+
+    .icon i {
+        color: ghostwhite;
+    }
+
+
+    
+
+    .twolayers img{
+        width: 48em;
+        height: 18em;
+    }
+   
+ 
+    
+    .bar{
+        height: 4.5em;
+    }
+    
+
+
+    
+    .intro {
+        width: 15em;
+        height: 4.5em;
+        font-size: 2.3em;
+        margin-right: 15em;
+        margin-bottom: 1em;
+        margin-top: 6.5em;
+      }
+      
+    
+
+    .skills {
+        padding-right: 10em;
+        padding-left: 10em;
+    }
+
+    .skills img {
+        width: 35%;
+    }
+
+    .popup {
+        padding-top: 20%;
+    }
+
+    .boxes {
+        display: flex;
+        height: 400px;
+        flex-direction: row;
+    }
+
+
+    .menu {
+        border: 0.5px solid black;
+        transition: 0.5s flex;
+    }
+
+    .text {
+        padding-top: 3em;
+        font-size: 3.5em;
+        transition: 0.3s;
+    }
+
+
+
+
+    .subtitle {
+        padding: 1em;
+        padding-top: 1.3em;
+        border: 7 solid white;
+        width: 10em;
+        margin-top: 2.5em;
+    }
+
+    
+    .menu:hover .subtitle {
+        transform: translateY(-60%);
+
+    }
+
+   
+    
+    
+    
+    .boxes .text {
+        font-size: 2.7em;
+    }
+
+    footer a {
+        padding-bottom: 0.6em;
+    }
+
+    /*** ux page ***/
+
+
+
+    .uxwords {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .explanation p {
+        font-size: 1.8em;
+        padding-bottom: 0.4em;
+        padding-left: 0.5em;
+    }
+
+    .explanation img {
+        height: 11em;
+    }
+
+
+    .pageone img {
+        height: 70vh;
+        width: 50%;
+    }
+
+
+    .pageone h1 {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        text-align: center;
+        width: 50%;
+        
+        font-size: 7em;
+        color: aliceblue;
+        padding-top: 4.5em;
+        
+    }
+
+
+    .works h1 {
+       
+        
+        font-size: 3.5em;
+    }
+
+    .creativeprocess a{
+        font-size: 1.8em;
+    }
+    
+    /*** gallery page ***/
+
+    .numbers {
+        padding-top: 20%;
+        padding-bottom: 10%;
+        font-size: 1.7em;
+    }
+
+    .snd h1 {
+        padding-top: 5.4em;
+        padding-bottom: 4em;
+        font-size: 3.4em;
+    }
+
+    iframe{
+        width: 75%;
+        height: 50vh;
+    }
+
+}
+
+/*** coding plage ***/
+.codewords{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .positionnav {
+        height: 10%;
+    }
+
+    .md-navigation {
+        right: 9em;
+        padding-top: 2.2em;
+    }
+
+
+    .md-navigation ul {
+        grid-gap: 2.7em;
+    }
+
+
+
+
+    .modal {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+    }
+
+    .modal img {
+        border-radius: 3em;
+        width: 55%;
+        height: 80%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+
+    }
+
+    .newmodal {
+        top: 0;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+
+    }
+
+    .newmodal img {
+        border-radius: 3em;
+        width: 85%;
+        height: 100%;
+        margin-top: 0%;
+
+    }
+
+
+   
+
+
+    .md-navigation ul li a {
+        font-size: 1.4em;
+    }
+
+    
+    
+  
+    
+   .twolayers img{
+        
+        width: 60em;
+        height: 20em;
+    }
+   
+ 
+    
+    .bar{
+        height: 6.5em;
+    }
+    
+
+
+    
+    .intro {
+        width: 15em;
+        height: 4.5em;
+        font-size: 2.4em;
+        margin-right: 15em;
+        margin-bottom: 1em;
+        margin-top: 5.5em;
+      }
+
+    
+    
+      .popup {
+          font-size: 1.5em;
+      }
+
+      .html .popup {
+          padding-top: 15%;
+      }
+
+
+
+    .title {
+        font-size: 3.7em;
+    }
+
+
+    /*** ux page ***/
+
+   .pageone h1 {
+
+        font-size: 8em;
+        padding-top: 3.5em;
+    }
+
+    
+    .pageone img {
+        width: 50%;
+        height: 65vh;
+    }
+
+    
+    .explanation img {
+        height: 14em;
+    }
+
+    .explanation p {
+
+        font-size: 2.5em;
+        padding-bottom: 0.4em;
+    }
+
+    .works h1 {
+       
+        font-size: 5em;
+    }
+
+
+    
+
+    .uxtwo h1 {
+        padding-top: 10%;
+    }
+
+   
+
+    .icon {
+        font-size: 1.5em;
+        bottom: 13%;
+    }
+
+
+
+
+    /*** gallery page ***/
+
+    .numbers {
+        padding-top: 30%;
+        padding-bottom: 10%;
+        font-size: 2.8em;
+    }
+
+    .snd h1 {
+        padding-top: 4em;
+        padding-bottom: 4em;
+        font-size: 4.5em;
+    }
+
+    /**** sundry ****/
+
+    .f-three {
+        font-size: 1.7em;
+        padding-top: 15em;
+        padding-bottom: 1em;
+    }
+
+    .topicposter {
+        margin-top: 0;
+    }
+
+    /*** moving menu ***/
+
+
+
+   
+    
+    footer {
+        margin-top: 1em;
+    }
+
+    footer a {
+        font-size: 2.5em;
+    }
+
+    iframe{
+        height: 60vh;
+    }
+}
+
+
+@media screen and (min-width: 2560px) {
+
+    .positionnav {
+        height: 10%;
+    }
+
+    .md-navigation {
+        font-size: 1em;
+        right: 15em;
+        padding-top: 2.5em;
+    }
+
+    
+    .modal img {
+        height: 90%;
+        width: 50%;
+    }
+
+    .newmodal img {
+        width: 60%;
+        height: 100%;
+    }
+
+    .photo {
+        width: 20%;
+    }
+
+    .newphoto {
+        width: 20%;
+    }
+
+
+
+
+    .md-navigation ul {
+        margin-right: 2em;
+        grid-gap: 1.5em;
+    }
+
+    
+
+    .md-navigation ul li a {
+        padding-right: 1em;
+        font-size: 2.6em;
+    }
+
+
+
+     
+    
+.twolayers img{
+        
+        width: 100em;
+        height: 30em;
+    
+    }
+   
+ 
+    
+    .bar{
+        height: 8em;
+    }
+    
+
+
+    
+    .intro {
+        width: 15em;
+        height: 4.5em;
+        font-size: 4em;
+        margin-right: 15em;
+        margin-top: 7em;
+      }
+    
+    
+    
+    
+    .icon {
+        top: 11%;
+        font-size: 2.4em;
+    }
+
+
+    
+    .popup{
+        font-size: 3em;
+        padding-top: 17%;
+    }
+
+    .title {
+        font-size: 6.5em;
+    }
+
+    footer {
+        font-size: 3em;
+    }
+
+    .boxes {
+        font-size: 1.4em;
+    }
+
+    
+    
+    .menu:hover .subtitle {
+        transform: translateY(-190%);
+        margin-top: 13em;
+    }
+
+    .menu:hover {
+        flex: 1 0 450px;
+    }
+
+    /*** ux page ***/
+
+    .explanation img {
+        height: 26em;
+    }
+
+    .explanation p {
+        font-size: 5em;
+    }
+
+    .pageone img {
+        height: 50em;
+    }
+
+   .pageone h1 {
+
+        font-size: 12em;
+        padding-top: 3.1em;
+    }
+
+
+
+    .works h1 {
+        font-size: 8em;
+    }
+
+   
+
+    
+
+   
+    
+    /*** gallery page ***/
+
+    .numbers {
+        padding-top: 30%;
+        padding-bottom: 10%;
+        font-size: 4em;
+    }
+
+    .snd h1 {
+        padding-top: 3em;
+        padding-bottom: 4em;
+        font-size: 6em;
+    }
+
+    footer {
+        font-size: 1.6em;
+    }
+
+
+}

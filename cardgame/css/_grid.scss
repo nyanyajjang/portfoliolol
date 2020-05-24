@@ -1,0 +1,55 @@
+$grid-num-cols: 13 !default;
+$grid-row-height: 300px;
+
+$grid-bp-xs: 0px !default;
+$grid-bp-sm: 576px !default;
+$grid-bp-md: 768px !default;
+$grid-bp-lg: 992px !default;
+$grid-bp-xl: 1200px !default;
+
+$map-grid-breakpoints: (
+    '': $grid-bp-xs,
+    '-xs': $grid-bp-xs,
+    '-sm': $grid-bp-sm,
+    '-md': $grid-bp-md,
+    '-lg': $grid-bp-lg,
+    '-xl': $grid-bp-xl
+);
+
+@mixin create-breakpoint($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin create-bp-columns($type, $num-cols: $grid-num-cols, $breakpoint) {
+    @include create-breakpoint($breakpoint) {
+        &__col#{$type}-offset-0 {
+            margin-left: 0;
+        }
+
+        @for $i from 1 through $num-cols {
+            &__col#{$type}-#{$i} {
+                flex-basis: 100 * ($i / $num-cols) * 1%;
+            }
+
+            &__col#{$type}-offset-#{$i} {
+                margin-left: 100 * ($i / $num-cols) * 1%;
+            }
+        }
+    }
+}
+
+.grid {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    }
+
+    @each $type, $breakpoint in $map-grid-breakpoints {
+        @include create-bp-columns($type, $grid-num-cols, $breakpoint);
+    }
+
+}

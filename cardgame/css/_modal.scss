@@ -1,0 +1,50 @@
+$modal-window-width: 300px !default;
+$modal-window-height: 150px !default;
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+    &__window {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        padding: 20px;
+        border: 1px solid #888;
+        outline: 10px solid skyblue;
+
+        width: $modal-window-width;
+        height: $modal-window-height;
+
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+        background-color: #fefefe;
+
+        &__title {
+            text-align: center;
+        }
+
+        &__container {
+
+            width: 50%;
+            height: 50%;
+
+            margin: auto;
+        }
+
+        &__button {
+            height: 20px;
+
+            margin-top: 50px;
+        }
+    }
+}
