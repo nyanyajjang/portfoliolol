@@ -72,7 +72,7 @@ $modal.addEventListener('click', function(e) {
 
 
 $photoillust.addEventListener('mouseover', function(e){
-    console.log(event.target)
+    // console.log(event.target)
     const photo
     = event.target.closest('.photo')
     
@@ -83,7 +83,7 @@ $photoillust.addEventListener('mouseover', function(e){
 
 
 $photoillust.addEventListener('mouseout', function(e){
-    console.log(event.target)
+    // console.log(event.target)
     const photo= event.target.closest('.photo')
     
     if (photo) {
@@ -144,7 +144,7 @@ $newmodal.addEventListener('click', function(e) {
 
 
 $taken.addEventListener('mouseover', function(e){
-    console.log(event.target)
+    // console.log(event.target)
     const newphoto
     = event.target.closest('.newphoto')
     
@@ -155,7 +155,7 @@ $taken.addEventListener('mouseover', function(e){
 
 
 $taken.addEventListener('mouseout', function(e){
-    console.log(event.target)
+    // console.log(event.target)
     const newphoto= event.target.closest('.newphoto')
     
     if (newphoto) {
