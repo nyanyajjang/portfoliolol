@@ -635,17 +635,15 @@ footer a {
 
 .pageonelayout {
     background-color: bisque;
-    /* position: absolute;
+    position: absolute;
     bottom: 0;
-    top: 0; */
+    top: 0;
     width: 100%;
     opacity: 0.5;
 }
 
 .pageone {
-    /* position: relative; */
-    display: flex;
-    flex-direction: column;
+    position: relative;
 
 }
 
@@ -657,11 +655,11 @@ footer a {
 
 
 .pageone h1 {
-    /* position: absolute; */
-    /* bottom: 0%;
+    position: absolute;
+    bottom: 0%;
     top: 0%;
     left: 0%;
-    right: 0%; */
+    right: 0%;
     text-align: center;
     padding-top: 5em;
     font-family: 'Righteous', cursive;
@@ -1909,10 +1907,10 @@ iframe {
 
 
     .pageone h1 {
-        /* top: 0; */
+        top: 0;
         bottom: 0;
-        /* left: 50%; */
-        /* right: 0; */
+        left: 50%;
+        right: 0;
         text-align: center;
         width: 50%;
         
