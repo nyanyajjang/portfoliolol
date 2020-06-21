@@ -701,6 +701,7 @@ footer a {
     padding-top: 5%;
     padding-bottom: 5%;
     color: aliceblue;
+    line-height: 1.3em;
 
 }
 
@@ -1216,6 +1217,7 @@ footer a {
         padding-top: 5%;
         padding-bottom: 5%;
         color: aliceblue;
+        line-height: 1.3em;
 }
 .f-three {
     padding-top: 20%;
@@ -1890,8 +1892,9 @@ iframe {
 
 
     .uxwords {
-        padding-left: 20%;
-        padding-right: 20%;
+        padding-left: 33%;
+        padding-right: 33%;
+        line-height: 1.3em;
     }
     .explanation p {
         font-size: 1.8em;
@@ -1958,8 +1961,9 @@ iframe {
 
 /*** coding plage ***/
 .codewords{
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 33%;
+    padding-right: 33%;
+    line-height: 1.3em;
 }
 
 
